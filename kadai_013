@@ -1,7 +1,9 @@
-def Product(price, tax):
+def calculate_price_with_tax(price, tax_rate=0.10):
+    total_price = price * (1 + tax_rate)
+    return total_price
 
-  total = price * (tax * 0.11)
+price = 1000  
+tax_rate = 0.10  
 
-  print(f"{total}円")
-
-Product(1000, 10)
+result = calculate_price_with_tax(price, tax_rate)
+print(f"商品の価格: {price}円, 消費税率: {tax_rate * 100}%, 合計金額: {result}円")
